@@ -1,0 +1,191 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-16 16:28:44.595547",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "supplier",
+  "mode_of_payment",
+  "column_break_uksp",
+  "supplier_name",
+  "pay_from_account",
+  "company",
+  "currency",
+  "payment_details_section",
+  "outsource_services_payment",
+  "section_break_ej1v",
+  "total_payment",
+  "total_taxes",
+  "column_break_rsxw",
+  "total_claimed",
+  "signatures_section",
+  "receiver",
+  "column_break_5iyc",
+  "accountant",
+  "column_break_u226",
+  "manager",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serial",
+   "options": "OP-"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode Of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_uksp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "supplier.supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name"
+  },
+  {
+   "fieldname": "pay_from_account",
+   "fieldtype": "Link",
+   "label": "Pay From Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "AED",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "payment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Payment Details"
+  },
+  {
+   "fieldname": "outsource_services_payment",
+   "fieldtype": "Table",
+   "label": "Outsource Services Payment",
+   "options": "Outsource Services Payment"
+  },
+  {
+   "fieldname": "section_break_ej1v",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_payment",
+   "fieldtype": "Currency",
+   "label": "Total Payment",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_taxes",
+   "fieldtype": "Currency",
+   "label": "Total Taxes",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_rsxw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_claimed",
+   "fieldtype": "Currency",
+   "label": "Total Claimed",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "signatures_section",
+   "fieldtype": "Section Break",
+   "label": "Signatures"
+  },
+  {
+   "fieldname": "receiver",
+   "fieldtype": "Data",
+   "label": "Receiver"
+  },
+  {
+   "fieldname": "column_break_5iyc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accountant",
+   "fieldtype": "Data",
+   "label": "Accountant"
+  },
+  {
+   "fieldname": "column_break_u226",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "manager",
+   "fieldtype": "Data",
+   "label": "Manager"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Outsource Payment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:45.177581",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Outsource Payment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

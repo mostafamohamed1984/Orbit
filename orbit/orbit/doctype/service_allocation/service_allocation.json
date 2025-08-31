@@ -1,0 +1,151 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-14 22:39:10.276792",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice",
+  "item",
+  "total",
+  "total_taxes",
+  "outstanding",
+  "paid_amount",
+  "payment_amount",
+  "tax_ratio",
+  "payment_tax",
+  "unearned_account",
+  "revenue_account",
+  "project_agreement_reference",
+  "remark",
+  "allocated_amount",
+  "allocate_from",
+  "advance_account",
+  "customer_debit_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_taxes",
+   "fieldtype": "Currency",
+   "label": "Total Taxes",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "tax_ratio",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Tax Ratio"
+  },
+  {
+   "fieldname": "payment_tax",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Tax",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "unearned_account",
+   "fieldtype": "Link",
+   "label": "Unearned Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "revenue_account",
+   "fieldtype": "Link",
+   "label": "Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "project_agreement_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Agreement Reference",
+   "options": "Project Agreement"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "fieldname": "allocated_amount",
+   "fieldtype": "Currency",
+   "label": "Allocated Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "allocate_from",
+   "fieldtype": "Link",
+   "label": "Allocate From",
+   "options": "Allocation Types"
+  },
+  {
+   "fetch_from": "allocate_from.advance_account",
+   "fieldname": "advance_account",
+   "fieldtype": "Link",
+   "label": "Advance Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "customer_debit_to",
+   "fieldtype": "Link",
+   "label": "Customer Debit To",
+   "options": "Account"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:49.090095",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Service Allocation",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

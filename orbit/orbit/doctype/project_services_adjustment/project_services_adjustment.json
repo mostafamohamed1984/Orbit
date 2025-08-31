@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-17 21:08:45.079366",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_agreement",
+  "project_name",
+  "customer",
+  "customer_name",
+  "company",
+  "currency",
+  "section_break_qw1x",
+  "mode_of_payment",
+  "date",
+  "gov_fees_balance",
+  "trust_fees_balance",
+  "gov_fees_account",
+  "trust_fees_account",
+  "return_gov_fees",
+  "return_trust_fees",
+  "section_break_fm9o",
+  "adjustment_services",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serial",
+   "options": "PSA-"
+  },
+  {
+   "fieldname": "project_agreement",
+   "fieldtype": "Link",
+   "label": "Project Agreement",
+   "options": "Project Agreement"
+  },
+  {
+   "fetch_from": "project_agreement.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fetch_from": "project_agreement.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "AED",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "section_break_qw1x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fetch_from": "project_agreement.advance_balance",
+   "fieldname": "gov_fees_balance",
+   "fieldtype": "Currency",
+   "label": "Gov. Fees Balance",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fetch_from": "project_agreement.trust_fees_balance",
+   "fieldname": "trust_fees_balance",
+   "fieldtype": "Currency",
+   "label": "Trust Fees Balance",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "gov_fees_account",
+   "fieldtype": "Link",
+   "label": "Gov. Fees Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "trust_fees_account",
+   "fieldtype": "Link",
+   "label": "Trust Fees Account",
+   "options": "Account"
+  },
+  {
+   "default": "0",
+   "fieldname": "return_gov_fees",
+   "fieldtype": "Check",
+   "label": "Return Gov. Fees"
+  },
+  {
+   "default": "0",
+   "fieldname": "return_trust_fees",
+   "fieldtype": "Check",
+   "label": "Return Trust Fees"
+  },
+  {
+   "fieldname": "section_break_fm9o",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "adjustment_services",
+   "fieldtype": "Table",
+   "label": "Adjustment Services",
+   "options": "Adjustment Services"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Services Adjustment",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:47.517646",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Project Services Adjustment",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,285 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-02 13:25:39.924992",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_agreement",
+  "employee",
+  "project_balance",
+  "trust_fees_balance",
+  "column_break_wl5r",
+  "customer",
+  "customer_name",
+  "customer_advance_account",
+  "trust_fees_account",
+  "company",
+  "section_break_6hvk",
+  "advances",
+  "gov_fees_details_section",
+  "expenses_items",
+  "pending_items",
+  "section_break_gyxq",
+  "expense_trust_fees_via_",
+  "mode_of_payment",
+  "column_break_r3xi",
+  "payment_account",
+  "contractor",
+  "contractor_name",
+  "section_break_zyin",
+  "trust_fees_expenses",
+  "section_break_mbz6",
+  "total_expenses",
+  "total_claimed_trust_fees",
+  "total_pending",
+  "column_break_mi10",
+  "total_advances",
+  "total_unclaimed_amount",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serial",
+   "options": "PRJ-EXP-"
+  },
+  {
+   "fieldname": "project_agreement",
+   "fieldtype": "Link",
+   "label": "Project Agreement",
+   "options": "Project Agreement"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fetch_from": "project_agreement.advance_balance",
+   "fieldname": "project_balance",
+   "fieldtype": "Currency",
+   "label": "Project Balance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "project_agreement.trust_fees_balance",
+   "fieldname": "trust_fees_balance",
+   "fieldtype": "Currency",
+   "label": "Trust Fees Balance",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wl5r",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project_agreement.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_advance_account",
+   "fieldtype": "Link",
+   "label": "Customer advance Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "trust_fees_account",
+   "fieldtype": "Link",
+   "label": "Trust Fees Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6hvk",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "advances",
+   "fieldtype": "Table",
+   "label": "Advances",
+   "options": "Expense Claim Advance",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "gov_fees_details_section",
+   "fieldtype": "Section Break",
+   "label": "Gov. Fees Details"
+  },
+  {
+   "fieldname": "expenses_items",
+   "fieldtype": "Table",
+   "label": "Expenses Items",
+   "options": "Expenses Items"
+  },
+  {
+   "fieldname": "pending_items",
+   "fieldtype": "Table",
+   "label": "Pending Items",
+   "options": "Pending Items",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_gyxq",
+   "fieldtype": "Section Break",
+   "label": "Trust Fees Details"
+  },
+  {
+   "fieldname": "expense_trust_fees_via_",
+   "fieldtype": "Select",
+   "label": "Expense Trust Fees Via ?",
+   "options": "\nEmployee Advance\nOther"
+  },
+  {
+   "depends_on": "eval:doc.expense_trust_fees_via_ =='Other'",
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Link",
+   "label": "Mode of Payment",
+   "options": "Mode of Payment"
+  },
+  {
+   "fieldname": "column_break_r3xi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.expense_trust_fees_via_ =='Other'",
+   "fieldname": "payment_account",
+   "fieldtype": "Link",
+   "label": "Payment Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.expense_trust_fees_via_ =='Other'",
+   "fieldname": "contractor",
+   "fieldtype": "Link",
+   "label": "Contractor",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "contractor.customer_name",
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "label": "Contractor Name"
+  },
+  {
+   "fieldname": "section_break_zyin",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "depends_on": "eval:doc.expense_trust_fees_via_ !=''",
+   "fieldname": "trust_fees_expenses",
+   "fieldtype": "Table",
+   "label": "Trust Fees Expenses",
+   "options": "Trust Fees Expenses"
+  },
+  {
+   "fieldname": "section_break_mbz6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_expenses",
+   "fieldtype": "Currency",
+   "label": "Total Expenses",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_claimed_trust_fees",
+   "fieldtype": "Currency",
+   "label": "Total Claimed Trust fees",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_pending",
+   "fieldtype": "Currency",
+   "label": "Total Pending",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mi10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_advances",
+   "fieldtype": "Currency",
+   "label": "Total Advances",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_unclaimed_amount",
+   "fieldtype": "Currency",
+   "label": "Total Unclaimed Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Project Expenses",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:39.095867",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Project Expenses",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

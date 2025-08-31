@@ -1,0 +1,165 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-17 21:23:30.197670",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice",
+  "item",
+  "total",
+  "total_taxes",
+  "tax_ratio",
+  "transaction_type",
+  "discount_amount",
+  "column_break_ahyw",
+  "project_agreement_reference",
+  "unearned_account",
+  "revenue_account",
+  "tax_account",
+  "remark",
+  "section_break_vpyi",
+  "paid_amount",
+  "paid_tax",
+  "column_break_jwcw",
+  "outstanding",
+  "outstanding_amount",
+  "outstanding_tax"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Sales Invoice"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_taxes",
+   "fieldtype": "Currency",
+   "label": "Total Taxes",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "tax_ratio",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Tax Ratio"
+  },
+  {
+   "fieldname": "transaction_type",
+   "fieldtype": "Select",
+   "label": "Transaction Type",
+   "options": "\nDiscount\nCancel Due\nReturn All Without Taxes"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Currency",
+   "label": "Discount Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_ahyw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "project_agreement_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Agreement Reference",
+   "options": "Project Agreement"
+  },
+  {
+   "fieldname": "unearned_account",
+   "fieldtype": "Link",
+   "label": "Unearned Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "revenue_account",
+   "fieldtype": "Link",
+   "label": "Revenue Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "fieldname": "section_break_vpyi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Currency",
+   "label": "Paid Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "paid_tax",
+   "fieldtype": "Currency",
+   "label": "Paid Tax",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "column_break_jwcw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "outstanding_tax",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Outstanding Tax",
+   "options": "Company:company:default_currency"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:46.143811",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Adjustment Services",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

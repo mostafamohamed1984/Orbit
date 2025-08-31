@@ -1,0 +1,163 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2025-08-14 22:56:22.001850",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "date",
+  "project_allocate_from",
+  "project_name",
+  "company",
+  "currency",
+  "column_break_u5bm",
+  "customer",
+  "customer_name",
+  "gov_balance",
+  "trust_fees_balance",
+  "tax_account",
+  "section_break_wvkz",
+  "service_allocation",
+  "total_gov_fees_allocated",
+  "total_trust_fees_allocated",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serial",
+   "options": "P-A-"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "project_allocate_from",
+   "fieldtype": "Link",
+   "label": "Project Allocate From",
+   "options": "Project Agreement"
+  },
+  {
+   "fetch_from": "project_allocate_from.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "default": "AED",
+   "fieldname": "currency",
+   "fieldtype": "Link",
+   "label": "Currency",
+   "options": "Currency"
+  },
+  {
+   "fieldname": "column_break_u5bm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "project_allocate_from.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fetch_from": "customer.customer_name",
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name"
+  },
+  {
+   "fetch_from": "project_allocate_from.advance_balance",
+   "fieldname": "gov_balance",
+   "fieldtype": "Currency",
+   "label": "Gov. Balance",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fetch_from": "project_allocate_from.trust_fees_balance",
+   "fieldname": "trust_fees_balance",
+   "fieldtype": "Currency",
+   "label": "Trust Fees Balance",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "tax_account",
+   "fieldtype": "Link",
+   "label": "Tax Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_wvkz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "service_allocation",
+   "fieldtype": "Table",
+   "label": "Service Allocation",
+   "options": "Service Allocation"
+  },
+  {
+   "fieldname": "total_gov_fees_allocated",
+   "fieldtype": "Currency",
+   "label": "Total Gov. Fees Allocated",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_trust_fees_allocated",
+   "fieldtype": "Currency",
+   "label": "Total Trust Fees Allocated",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Projects Allocation",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:49.904518",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Projects Allocation",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

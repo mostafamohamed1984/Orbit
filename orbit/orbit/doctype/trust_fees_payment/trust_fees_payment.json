@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-11 16:11:51.816172",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "amount",
+  "remark",
+  "journal_entry_reference",
+  "project_agreement"
+ ],
+ "fields": [
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "journal_entry_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Journal Entry Reference",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "fieldname": "project_agreement",
+   "fieldtype": "Link",
+   "label": "Project Agreement",
+   "options": "Project Agreement"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:52.572228",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Trust Fees Payment",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

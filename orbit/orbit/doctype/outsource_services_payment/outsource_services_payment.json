@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-16 16:44:01.324450",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice",
+  "project_agreement",
+  "item",
+  "payment_amount",
+  "payment_tax",
+  "supplier_account",
+  "remark",
+  "tax_ratio",
+  "total",
+  "total_taxes",
+  "outstanding"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice",
+   "fieldtype": "Link",
+   "label": "Invoice",
+   "options": "Purchase Invoice"
+  },
+  {
+   "fieldname": "project_agreement",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project Agreement",
+   "options": "Project Agreement"
+  },
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "payment_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Amount",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "payment_tax",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Payment Tax",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "supplier_account",
+   "fieldtype": "Link",
+   "label": "Supplier Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Remark"
+  },
+  {
+   "fieldname": "tax_ratio",
+   "fieldtype": "Percent",
+   "label": "Tax Ratio"
+  },
+  {
+   "fieldname": "total",
+   "fieldtype": "Currency",
+   "label": "Total",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "total_taxes",
+   "fieldtype": "Currency",
+   "label": "Total Taxes",
+   "options": "Company:company:default_currency"
+  },
+  {
+   "fieldname": "outstanding",
+   "fieldtype": "Currency",
+   "label": "Outstanding",
+   "options": "Company:company:default_currency"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-08-31 11:56:44.221793",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Outsource Services Payment",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
