@@ -242,3 +242,11 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+# Fixtures
+# --------
+# Export only Client Scripts and Server Scripts belonging to the Orbit module
+fixtures = [
+    {"doctype": "Client Script", "filters": [["module", "=", "Orbit"]]},
+    {"doctype": "Server Script", "filters": [["module", "=", "Orbit"]]},
+]
+
