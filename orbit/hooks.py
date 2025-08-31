@@ -244,9 +244,5 @@ app_license = "mit"
 
 # Fixtures
 # --------
-# Export only Client Scripts and Server Scripts belonging to the Orbit module
-fixtures = [
-    {"doctype": "Client Script", "filters": [["module", "=", "Orbit"]]},
-    {"doctype": "Server Script", "filters": [["module", "=", "Orbit"]]},
-]
+# Removed Client Script and Server Script fixtures since logic is integrated into controllers/JS files.
 
