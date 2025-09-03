@@ -1,11 +1,12 @@
 # # Copyright (c) 2025, Smart Vision Group and contributors
 # # For license information, please see license.txt
 
-# import frappe
-# from frappe.model.document import Document
+import frappe
+from frappe.model.document import Document
 
 
-# class ProjectExpenses(Document):
+class ProjectExpenses(Document):
+	pass
 # 	def on_submit(self):
 # 		doc = self
 # 		default_company = None

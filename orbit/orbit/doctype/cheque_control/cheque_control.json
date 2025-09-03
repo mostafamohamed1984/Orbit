@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-03 14:45:47.914190",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_y767",
+  "transaction_date",
+  "cheque_number",
+  "project_agreement",
+  "status",
+  "column_break_oe12",
+  "due_date",
+  "bank",
+  "amount",
+  "accounts_details_section",
+  "company",
+  "collection_account",
+  "cheque_account",
+  "column_break_wspk",
+  "party_type",
+  "party"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_y767",
+   "fieldtype": "Section Break",
+   "label": "Cheque Details"
+  },
+  {
+   "fieldname": "transaction_date",
+   "fieldtype": "Date",
+   "label": "Transaction Date"
+  },
+  {
+   "fieldname": "cheque_number",
+   "fieldtype": "Data",
+   "label": "Cheque Number"
+  },
+  {
+   "fieldname": "project_agreement",
+   "fieldtype": "Link",
+   "label": "Project Agreement",
+   "options": "Project Agreement"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nUnclaimed\nDelayed\nCollected\nRejected"
+  },
+  {
+   "fieldname": "column_break_oe12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "due_date",
+   "fieldtype": "Date",
+   "label": "Due Date"
+  },
+  {
+   "fieldname": "bank",
+   "fieldtype": "Link",
+   "label": "Bank",
+   "options": "Bank"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "accounts_details_section",
+   "fieldtype": "Section Break",
+   "label": "Accounts Details"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "collection_account",
+   "fieldtype": "Link",
+   "label": "Collection Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cheque_account",
+   "fieldtype": "Link",
+   "label": "Cheque Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_wspk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "party_type",
+   "fieldtype": "Link",
+   "label": "Party Type",
+   "options": "DocType"
+  },
+  {
+   "fieldname": "party",
+   "fieldtype": "Dynamic Link",
+   "label": "Party",
+   "options": "party_type"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-03 14:45:47.914190",
+ "modified_by": "Administrator",
+ "module": "Orbit",
+ "name": "Cheque Control",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

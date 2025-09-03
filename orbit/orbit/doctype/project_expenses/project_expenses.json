@@ -101,6 +101,7 @@
    "options": "Account"
   },
   {
+   "default": "230103 - Customer Liability - Trust Fees - OR",
    "fieldname": "trust_fees_account",
    "fieldtype": "Link",
    "label": "Trust Fees Account",
@@ -257,7 +258,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-08-31 11:56:39.095867",
+ "modified": "2025-09-03 13:41:15.880338",
  "modified_by": "Administrator",
  "module": "Orbit",
  "name": "Project Expenses",

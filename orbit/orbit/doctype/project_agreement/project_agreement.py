@@ -1,11 +1,12 @@
 # # Copyright (c) 2025, Smart Vision Group and contributors
 # # For license information, please see license.txt
 
-# import frappe
-# from frappe.model.document import Document
+import frappe
+from frappe.model.document import Document
 
 
-# class ProjectAgreement(Document):
+class ProjectAgreement(Document):
+	pass
 # 	def on_submit(self):
 # 		# Integrate: Create Sales Invoices for services not yet invoiced
 # 		self._create_sales_invoices_for_project_services()
